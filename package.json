@@ -1,0 +1,20 @@
+{
+  "name": "invoiceai-root",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspaces --if-present",
+    "dev:api": "npm run dev --workspace=@invoiceai/api",
+    "dev:web": "npm run dev --workspace=@invoiceai/web",
+    "build": "npm run build --workspaces --if-present",
+    "test": "npm run test:workflow --workspace=@invoiceai/api",
+    "seed": "npm run seed --workspace=@invoiceai/api"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.5"
+  }
+}
