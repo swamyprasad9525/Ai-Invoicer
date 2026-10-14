@@ -65,7 +65,7 @@ authRouter.post('/register', async (req: Request, res: Response): Promise<void> 
       const defaultTenant = await TenantModel.findOne({ slug: 'swamy-slabs' });
       if (defaultTenant) {
         user.memberships.push({
-          tenantId: defaultTenant._id,
+          tenantId: defaultTenant._id as any,
           role: 'OWNER_ADMIN',
           permissions: ['*']
         });

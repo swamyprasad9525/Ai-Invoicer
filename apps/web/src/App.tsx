@@ -178,7 +178,7 @@ export function App() {
           )}
 
           {currentView === 'customers' && (
-            <CustomerListView customers={customers} />
+            <CustomerListView customers={customers} onRefresh={loadInitialData} />
           )}
 
           {currentView === 'audit' && (
